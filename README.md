@@ -36,3 +36,11 @@ For the transformation technique, you choose "brightness" for the brightness tec
 python file.py -img1 "path of the first input image" -img2 "path of the second input image.
 ```
 
+## Cropping
+In our context, cropping involves centering the images to eliminate empty portions of the volume.
+to run the script `crop.py`, you need to execute it :
+```Python 
+python crop.py -img1 "path of the first input image" -img2 "path of the output folder for the cropped imagee".
+```
+
+## Resampling 
