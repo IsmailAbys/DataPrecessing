@@ -53,3 +53,8 @@ Inside the 'utils' folder, you can find some utility scripts, for example, to pl
 ```Python 
 python file.py -i "path of input image"
 ```
+For the example 
+```Python 
+python histograms.py -i "path of input image"
+```
+will give us, the histogram of input image, ![Screenshot](Figure_1.png)
