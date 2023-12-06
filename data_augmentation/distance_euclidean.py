@@ -33,5 +33,5 @@ if __name__ == "__main__":
         raise ValueError("The images must have the same dimension")
     image1_vec_id = REshape(image1)
     image2_vec_id = REshape(image2)
-    de_value = distance_euclidean(image1_vec_id, image2_vec_id)
+    de_value = distance_euclidean(image1_vec_id, image2_vec_id)/(len(image1_vec_id))
     print(f"The ecludian distance between image1 and image2: {de_value}")

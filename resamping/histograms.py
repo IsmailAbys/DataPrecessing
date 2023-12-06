@@ -1,3 +1,5 @@
+import os
+import argparse
 import numpy as np
 import nibabel as nib
 import matplotlib.pyplot as plt
@@ -17,6 +19,8 @@ def plot_hist(x):
 
 
 if __name__ == "__main__":
-    data = nib.load('D:\\sujetFracTest\\image.nii.gz').get_fdata()
-    data_vec = reshaping(data)
+    parser = argparse.ArgumentParser(description='The resampling the data')
+    parser.add_argument("-i", "--input", type=str, required=True, help="path to input image") # If you need to resample only one image, use this command
+    args = parser.parse_args()
+    data_vec = reshaping(nib.load(args.input).get_fdata())
     plot_hist(data_vec)

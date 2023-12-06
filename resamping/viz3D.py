@@ -16,7 +16,7 @@ class ArrayView3D(object):
 
     def view3DArray(data):
         canvas = scene.SceneCanvas(
-            keys='interactive', size=(800, 600), show=True)
+            keys='interactive', size=(1000, 800), show=True)
         
         # Set up a viewbox to display the image with interactive pan/zoom
         view = canvas.central_widget.add_view()
@@ -44,8 +44,8 @@ class ArrayView3D(object):
                 axis.transform.reset()
 
                 axis.transform.rotate(cam2.roll, (0,1, 0))
-                axis.transform.rotate(cam2.elevation, (0,0,1))
-                axis.transform.rotate(cam2.azimuth, (1,0,0))
+                axis.transform.rotate(cam2.elevation, (1,0,0))
+                axis.transform.rotate(cam2.azimuth, (0,0,1))
 
                 axis.transform.scale((50, 50, 0.001))
                 axis.transform.translate((50., 50.))
@@ -54,7 +54,7 @@ class ArrayView3D(object):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='3D vVisualization of the image')
+    parser = argparse.ArgumentParser(description='3D Visualization of the image')
     parser.add_argument("-i", "--input", type=str, required=True, help="path to input image") 
     args = parser.parse_args()
     data = nib.load(args.input).get_fdata()

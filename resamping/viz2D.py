@@ -30,7 +30,7 @@ class ArrayView(object):
         im = cube[tuple(s)].squeeze()
     
         # display imagecc
-        l = ax.imshow(im, cmap="gray")
+        l = ax.imshow(im)
         fig.colorbar(l, ax=ax)
         # define slider
 
@@ -53,7 +53,7 @@ class ArrayView(object):
         
         
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='3D vVisualization of the image')
+    parser = argparse.ArgumentParser(description='2D Visualization of the image')
     parser.add_argument("-i", "--input", type=str, required=True, help="path to input image") 
     args = parser.parse_args()
     data = nib.load(args.input).get_fdata()
