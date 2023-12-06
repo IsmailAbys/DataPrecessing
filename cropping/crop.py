@@ -24,8 +24,8 @@ class MyDataset(Dataset):
 
 if __name__ == "__main__":      
     parser = argparse.ArgumentParser(description='Data cropping')
-    parser.add_argument('--data-dir', type=str, help='path of the input data')
-    parser.add_argument('--out-dir', type=str, help='path to the cropped data')
+    parser.add_argument("-i", '--data-dir', type=str, help='path of the input data')
+    parser.add_argument("-o", '--out-dir', type=str, help='path to the cropped data')
     args = parser.parse_args()
     idx = 0
     images_path = sorted(glob.glob(os.path.join(args.data_dir,  "*.nii.gz")))
