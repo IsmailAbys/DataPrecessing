@@ -44,3 +44,12 @@ python crop.py -img1 "path of the first input image" -img2 "path of the output f
 ```
 
 ## Resampling 
+The folder resampling contains, the script for resampling, to run it, you need to execute:
+```Python
+python resampling.py  --data-dir "path of the input data"  -x "size of x" -y "size of y" -z "size of z" --out-dir "output path" 
+```
+
+Inside the 'utils' folder, you can find some utility scripts, for example, to plot histograms, plot slices, or 3D visualization. To run, you can execute it in the following way:
+```Python 
+python file.py -i "path of input image"
+```
