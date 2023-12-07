@@ -5,8 +5,11 @@ import nibabel as nib
 import scipy.ndimage
 import argparse
 
+parser = argparse.ArgumentParser(description='2D Visualization of the image')
+parser.add_argument("-i", "--input", type=str, required=True, help="path to input image") 
+parser.add_argument('-axis', type=int, default=1, help='size of x') 
 
-
+args = parser.parse_args()
 
 class ArrayView(object):
 
@@ -17,7 +20,7 @@ class ArrayView(object):
 
 
     # remove erroneous line breaks
-    def view3DArray(cube, axis=2, **kwargs):
+    def view3DArray(cube, axis=args.axis, **kwargs):
 
         
         # generate figure
@@ -26,6 +29,8 @@ class ArrayView(object):
         fig.subplots_adjust(left=0.25, bottom=0.25)
     
         # select first image
+        if axis>2 or axis < 0:
+            raise ValueError("The axis must be positive and lower 3, 0 for x axis, 1 for y axis and 2 for z axis")
         s = [slice(0, 1) if i == axis else slice(None) for i in range(3)]
         im = cube[tuple(s)].squeeze()
     
@@ -53,9 +58,7 @@ class ArrayView(object):
         
         
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='2D Visualization of the image')
-    parser.add_argument("-i", "--input", type=str, required=True, help="path to input image") 
-    args = parser.parse_args()
+
     data = nib.load(args.input).get_fdata()
     #visualization 3D
     ArrayView.view3DArray(data)
