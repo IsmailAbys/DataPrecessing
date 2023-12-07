@@ -57,4 +57,4 @@ For the example
 ```Python 
 python histograms.py -i "path of input image"
 ```
-will give us, the histogram of input image, ![Screenshot](Figure_1.png)
+will give us, the histogram of input image, ![Screenshot](https://github.com/IsmailAbys/DataPrecessing/blob/main/utils/Figure_1.png)
