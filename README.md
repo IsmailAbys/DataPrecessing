@@ -18,7 +18,7 @@ Before executing the code, you must first install the libraries in the requireme
 
 Or create a conda environnement with `pre-process` by excuting
 ```Python
-conda env create - f pre-process 
+conda env create -f pre-process 
 ```
 
 ## Python scripts and their function
