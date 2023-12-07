@@ -11,15 +11,20 @@ cd Data-augmentation-and-quality-evaluation
 ```
 
 ## Installation
-Before executing the code, you must first install the libraries in the requirements file and make sure you have the correct versions installed.
 we used the `Python==3.9.18`
+Before executing the code, you must first install the libraries in the requirements file and make sure you have the correct versions installed.
+
 `pip install -r requirements.txt`
 
+Or create a conda environnement with `pre-process` by excuting
+```Python
+conda env create - f pre-process 
+```
 
 ## Python scripts and their function
-The folder `Data_Aug_&_Quality_evaluation` contains all files, so you can use :.
+The folder `data_augmentation` contains all files, so you can use :.
 ```Python
-cd Data_Aug_&_Quality_evaluation
+cd data_augmentation
 ```
 
 This script `data_aug.py` contains all functions (brightness, flipping, 30° and 90° rotation) and run it with \
