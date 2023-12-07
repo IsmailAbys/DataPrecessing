@@ -1,4 +1,4 @@
-name: data_aug_env
+name: pre-process
 channels:
   - defaults
 dependencies:
