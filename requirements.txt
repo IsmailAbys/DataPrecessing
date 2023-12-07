@@ -1,6 +1,6 @@
 dicom2nifti==2.4.9
 nibabel==3.2.2
-numpy==1.22.3
+numpy>=1.22.3
 scikit-image==0.22.0
 scikit-learn==1.0.2
 scipy==1.8.0
