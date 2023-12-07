@@ -12,7 +12,7 @@ cd Data-augmentation-and-quality-evaluation
 
 ## Installation
 Before executing the code, you must first install the libraries in the requirements file and make sure you have the correct versions installed.
-
+we used the `Python==3.9.18`
 `pip install -r requirements.txt`
 
 
